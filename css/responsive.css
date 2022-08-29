@@ -6,8 +6,20 @@
   .header_section{
     height: 800px;
   }
+
+  .banner_section {
+    width: 100%;
+    height: 150px;
+    float: left;
+    background: #d0edf0;
+  }
+
   .banner_taital {
-    text-align: center;
+    padding-left: 30px;
+  }
+
+  .banner_text {
+    padding-left:30px;
   }
 
   .btn_main {
@@ -138,18 +150,21 @@
 /*------------------------------------------------------------------- 599px x 280px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
+ 
   .banner_section {
     width: 100%;
+    height: 900px;
     float: left;
     background: #d0edf0;
   }
 
   .banner_taital {
-    text-align: center;
+    padding-left: 30px;
   }
 
   .banner_text {
-    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .btn_main {
@@ -256,12 +271,12 @@
   .btn_continue {
     display: flex;
     justify-content: center;
+    margin-top: 0px;
     margin-bottom: 20px;
   }
 
   .btn_continue button {
     width: 300px;
-    margin-top: 10px;
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -269,8 +284,16 @@
     height: 850px;
   }
 
+  .banner_section {
+    height: 10px;
+  }
+
   .banner_taital {
     text-align: center;
+  }
+
+  .banner_text {
+    padding-left: 30px;
   }
 
   .btn_main {
@@ -364,10 +387,10 @@
   .btn_continue {
     display: flex;
     justify-content: center;
+    margin-top: 0;
   }
 
   .btn_continue button {
-    margin-top: 0;
     width: 300px;
   }
 }
@@ -668,5 +691,23 @@
   }
   #my_slider a.carousel-control-prev {
     display: none;
+  }
+}
+
+@media only screen and (min-width: 1440px) and (max-width: 2560px) {
+  .header_section{
+    height: 850px;
+  }
+
+  .banner_section {
+    height: 10px;
+  }
+
+  .banner_taital {
+    text-align: center;
+  }
+
+  .banner_text{
+    text-align: center;
   }
 }
