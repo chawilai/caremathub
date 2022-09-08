@@ -7,18 +7,20 @@
     height: 800px;
   }
 
-  .banner_section {
+  /* index page */
+
+  .home_section {
     width: 100%;
     height: 150px;
     float: left;
     background: #d0edf0;
   }
 
-  .banner_taital {
+  .home_taital {
     padding-left: 30px;
   }
 
-  .banner_text {
+  .home_text {
     padding-left:30px;
   }
 
@@ -65,7 +67,14 @@
     padding-right: 0;
   }
 
-  .title_service {
+  .service_section {
+    width: 100%;
+    height: 150px;
+    float: left;
+    background: #d0edf0;
+  }
+
+  .service_title {
     text-align: center;
   }
 
@@ -125,7 +134,10 @@
 /*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 599px) and (max-width: 767px) {
-  .banner_taital {
+  
+  /* index page */
+
+  .home_taital {
     text-align: center;
   }
 
@@ -151,18 +163,18 @@
 
 @media only screen and (min-width: 280px) and (max-width: 599px) {
  
-  .banner_section {
+  .home_section {
     width: 100%;
     height: 900px;
     float: left;
     background: #d0edf0;
   }
 
-  .banner_taital {
+  .home_taital {
     padding-left: 30px;
   }
 
-  .banner_text {
+  .home_text {
     padding-left: 30px;
     padding-right: 30px;
   }
@@ -213,7 +225,14 @@
     margin-left: auto;
 }
 
-  .title_service {
+.service_section {
+  width: 100%;
+  height: 900px;
+  float: left;
+  background: #d0edf0;
+}
+
+  .service_title{
     text-align: center;
   }
 
@@ -280,6 +299,9 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
+  
+  /* index page */
+  
   .header_section{
     height: 850px;
   }

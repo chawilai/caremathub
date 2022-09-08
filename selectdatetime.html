@@ -19,7 +19,7 @@
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css" />
     <!-- favicon -->
-    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css" />
     <!-- Tweaks for older IEs-->
@@ -44,29 +44,53 @@
   <body>
     <!-- header section start -->
     <div class="header_section">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light container">
-        <div><a href="index.html"><img width="200px" src="images/logo.png"></a></div>
-        <button class="navbar-toggler d-none" type="button" data-toggle="collapse"
-           data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-           aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div>
+          <a href="index.html"><img width="200px" src="images/logo.png" /></a>
+        </div>
+        <button
+          class="navbar-toggler d-none"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
-     </nav>
+      </nav>
       <!-- header section end -->
-      <!-- questionaire section start -->
-      <div class="questionaire_section">
+      <!-- banner section start -->
+      <div class="banner_section">
         <div class="container">
-          <h1 class="questionaire_title">แบบประเมินความเสี่ยงโรคติดต่อทางเพศสัมพันธ์ ด้วยตนเอง</h1>
-          <div class="all-cards">
-           
-          </div>
+          <h1 class="title_service">
+            เลือก วัน-เวลา ที่ต้องการจอง
+          </h1>
+          
+          <div v-show="step == 3" class="margin-top-20 margin-bottom-20" :class="class_step_3">
+            <template v-for="slot_date in lists.date_lists">
+                <h3 class="kanit text-white" v-text="date_label_thai(slot_date)"></h3>
+                <div class="mb-2">
+                    <template v-for="(slot, index) in slot_arr" v-if="hide_slot_pass(slot) && show_slot_each_day(slot_date, slot)">
+                        <input class="checkbox-budget" type="radio" name="budget" :id="`slot_${index + 1}`" @change="time_slot_checked(slot)">
+                        <label class="for-checkbox-budget" :for="`slot_${index + 1}`">
+                            <span :data-hover="show_time_slot(slot)" v-text="show_time_slot(slot)"></span>
+                        </label>
+                    </template>
+                </div>
+            </template>
+        </div>
+
+
+
           <div class="btn_continue">
-            <a class="btn btn-primary" href="Questionaire.html">ถัดไป</a>
+            <button class="btn btn-primary">ถัดไป</button>
           </div>
         </div>
       </div>
     </div>
-    <!-- questionaire section end -->
+    <!-- banner section end -->
     <!-- footer section start -->
     <div class="footer_section layout_padding">
       <div class="container">
